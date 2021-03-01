@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mi_card/card_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -74,46 +75,21 @@ class _HomeScreenState extends State<HomeScreen> {
               color: Colors.teal.shade100,
             ),
           ),
-          Card(
-            color: Colors.white,
-            margin: EdgeInsets.symmetric(horizontal: 30.0, vertical: 10.0),
-            // padding: EdgeInsets.all(10.0),
-            child: ListTile(
-              leading: Icon(
-                Icons.phone,
-                size: 30.0,
-                color: Colors.teal,
-              ),
-              title: Text(
-                '+92 302 3322433',
-                style: TextStyle(
-                  fontFamily: 'Source Sans Pro',
-                  fontSize: 20.0,
-                  color: Colors.teal,
-                  fontWeight: FontWeight.w400,
-                ),
-              ),
-            ),
+          CardScreen(
+            cardicon: Icons.phone,
+            iconsize: 30.0,
+            cardtitle: '+92 302 3322433',
+            fontsize: 20.0,
+            color: Colors.teal,
+            textfamily: 'Source Sans Pro',
           ),
-          Card(
-            color: Colors.white,
-            margin: EdgeInsets.symmetric(horizontal: 30.0, vertical: 10.0),
-            child: ListTile(
-              leading: Icon(
-                Icons.email,
-                size: 30.0,
-                color: Colors.teal[400],
-              ),
-              title: Text(
-                'andropplelab1@gmail.com',
-                style: TextStyle(
-                  fontFamily: 'Source Sans Pro',
-                  fontSize: 20.0,
-                  color: Colors.teal,
-                  fontWeight: FontWeight.w400,
-                ),
-              ),
-            ),
+          CardScreen(
+            cardicon: Icons.email,
+            iconsize: 30.0,
+            cardtitle: 'andropplelab1@gmail.com',
+            fontsize: 20.0,
+            color: Colors.teal,
+            textfamily: 'Source Sans Pro',
           ),
         ],
       ),
