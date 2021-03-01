@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,7 +13,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter App',
       theme: ThemeData(
-        primaryColor: Colors.blue,
+        primaryColor: Colors.teal,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: HomeScreen(),
@@ -31,42 +30,90 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.teal,
       appBar: AppBar(
-        title: Text("Basics Demo"),
+        title: Text(
+          "ANDROPPLE",
+          style: TextStyle(
+              letterSpacing: 2.6,
+              fontWeight: FontWeight.w400,
+              fontFamily: 'Source Sans Pro'),
+        ),
+        centerTitle: true,
       ),
-      body: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Container(
-            width: 100,
-            decoration: BoxDecoration(
-              color: Colors.red,
+          CircleAvatar(
+            backgroundImage: AssetImage('Assets/images/adeel.jpg'),
+            radius: 50.0,
+          ),
+          Text(
+            'Andropple Lab',
+            style: TextStyle(
+              fontFamily: 'Pacifico',
+              fontSize: 36.0,
+              color: Colors.white,
+              fontWeight: FontWeight.w100,
+              letterSpacing: 1.4,
             ),
-            child: Text('Container3'),
           ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Container(
-                width: 100.0,
-                height: 100.0,
-                color: Colors.blue,
-                child: Text('Container3'),
-              ),
-              Container(
-                width: 100.0,
-                height: 100.0,
-                color: Colors.brown,
-                child: Text('Container3'),
-              ),
-            ],
+          Text(
+            'FLUTTER DEVELOPER',
+            style: TextStyle(
+              fontFamily: 'Source Sans Pro',
+              fontSize: 20.0,
+              letterSpacing: 2.4,
+              color: Colors.teal[100],
+            ),
           ),
-          Container(
-            width: 100,
-            color: Colors.yellow,
-            child: Text('Container3'),
+          SizedBox(
+            width: 150.0,
+            height: 30.0,
+            child: Divider(
+              color: Colors.teal.shade100,
+            ),
+          ),
+          Card(
+            color: Colors.white,
+            margin: EdgeInsets.symmetric(horizontal: 30.0, vertical: 10.0),
+            // padding: EdgeInsets.all(10.0),
+            child: ListTile(
+              leading: Icon(
+                Icons.phone,
+                size: 30.0,
+                color: Colors.teal,
+              ),
+              title: Text(
+                '+92 302 3322433',
+                style: TextStyle(
+                  fontFamily: 'Source Sans Pro',
+                  fontSize: 20.0,
+                  color: Colors.teal,
+                  fontWeight: FontWeight.w400,
+                ),
+              ),
+            ),
+          ),
+          Card(
+            color: Colors.white,
+            margin: EdgeInsets.symmetric(horizontal: 30.0, vertical: 10.0),
+            child: ListTile(
+              leading: Icon(
+                Icons.email,
+                size: 30.0,
+                color: Colors.teal[400],
+              ),
+              title: Text(
+                'andropplelab1@gmail.com',
+                style: TextStyle(
+                  fontFamily: 'Source Sans Pro',
+                  fontSize: 20.0,
+                  color: Colors.teal,
+                  fontWeight: FontWeight.w400,
+                ),
+              ),
+            ),
           ),
         ],
       ),
